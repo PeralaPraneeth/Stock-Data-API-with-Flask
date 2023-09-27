@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/api/stock/<string:symbol>')
 def get_stock_data(symbol):
-    api_key = 'EJSN5Z5T92ZYHU05'
+    api_key = 'Replace with your API key'
     api_url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={api_key}'
     try:
         response = requests.get(api_url)
